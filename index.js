@@ -13,8 +13,8 @@ app.use(cors());
 const db = require("./models");
 
 // Routers
-// const routes = require("./routes/index.routes");
-// app.use("/", routes);
+const routes = require("./routes/index.routes");
+app.use("/api", routes);
 
 
 db.sequelize.sync({ alter: true }).then(() => {
