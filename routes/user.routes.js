@@ -18,7 +18,7 @@ function userRoutes() {
         userController.createUser
     );
 
-    // Get all users (no validation needed)
+    // Get all users
     router.get("/", userController.getAllUsers);
 
     // Get user by ID with ID validation
