@@ -19,7 +19,7 @@ app.use("/api", routes);
 
 db.sequelize.sync({ alter: true }).then(() => {
     app.listen(PORT, () => {
-        console.log("SERVER RUNNING ON PORT 4000");
+        console.log("SERVER RUNNING ON PORT 3000");
     });
 
     // app.listen(PORT,HOST,() => console.log(`Server running on ${HOST} at ${PORT}`));
