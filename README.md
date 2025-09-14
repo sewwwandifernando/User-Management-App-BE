@@ -25,6 +25,8 @@ npm install
 CREATE DATABASE `users-db`;
 ```
 
+Then execute the SQL script located at /db/db.sql to create tables and populate the database
+
 ### 4. Environment Variables
 
 Rename the provided .env.example file to .env and update it with your MySQL username and password:
