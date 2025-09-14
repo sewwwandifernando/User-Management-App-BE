@@ -60,7 +60,7 @@ async function getAllUsers(filters = {}, pagination = {}) {
         // Build where conditions
         const whereConditions = {};
 
-        // Name filter (partial match, case insensitive using LOWER function)
+        // Name filter (partial match, case insensitive)
         if (name) {
             whereConditions[Op.and] = whereConditions[Op.and] || [];
             whereConditions[Op.and].push(
@@ -72,7 +72,7 @@ async function getAllUsers(filters = {}, pagination = {}) {
             );
         }
 
-        // Email filter (partial match, case insensitive using LOWER function)
+        // Email filter (partial match, case insensitive)
         if (email) {
             whereConditions[Op.and] = whereConditions[Op.and] || [];
             whereConditions[Op.and].push(
@@ -84,7 +84,7 @@ async function getAllUsers(filters = {}, pagination = {}) {
             );
         }
 
-        // Country filter (exact match, case insensitive using LOWER function)
+        // Country filter (exact match, case insensitive)
         if (country) {
             whereConditions[Op.and] = whereConditions[Op.and] || [];
             whereConditions[Op.and].push(
@@ -230,7 +230,7 @@ async function getUserById(id) {
     }
 }
 
-//Update User Details
+//Edit User Details
 async function editUser(id, updatedData) {
     try {
         const user = await Users.findByPk(id);
@@ -287,7 +287,7 @@ async function editUser(id, updatedData) {
     }
 }
 
-//Delete User 
+//Delete User by ID
 async function deleteUser(userID) {
     try {
         const user = await Users.findByPk(userID);

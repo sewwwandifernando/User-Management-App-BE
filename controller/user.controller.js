@@ -63,7 +63,7 @@ async function getAllUsers(req, res) {
             });
         }
 
-        // Validate date format if provided
+        // Validate date format 
         if (filters.fromDate && isNaN(new Date(filters.fromDate))) {
             return res.status(400).json({
                 error: true,
