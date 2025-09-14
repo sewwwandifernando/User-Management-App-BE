@@ -27,7 +27,7 @@ CREATE DATABASE `users-db`;
 
 ### 4. Environment Variables
 
-Rename the provided .env.examplee file to .env and update it with your MySQL username and password:
+Rename the provided .env.example file to .env and update it with your MySQL username and password:
 
 ```env
 NODE_ENV=development
